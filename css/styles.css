@@ -5,8 +5,13 @@ body {
 .menu {
   display: flex;
   gap: 37px;
-  margin: 30px;
+  margin: 25px;
   justify-content: right;
+  height: 23px;
+}
+
+.separator-menu {
+  border-bottom: solid 1px hsl(0, 66%, 78%);
 }
 
 
@@ -65,7 +70,11 @@ body {
   line-height: 32px;
 }
 
-.add-list {
+.buttons {
+  display: flex;
+}
+
+.btn {
   background-color: #2289b6;
   width: 180px;
   text-align: center;
@@ -81,14 +90,8 @@ body {
 
 .tags {
   display: flex;
-  margin: 12px;
+  margin: 8px;
   height: 70px;
-}
-
-.premiere-date {
-  margin: 22px;
-  font-family: Arvo;
-  font-weight: 700;
 }
 
 .tag {
@@ -96,7 +99,19 @@ body {
   border-radius: 27px;
   width: 110px;
   text-align: center;
-  margin: 7px;
+  margin: 15px;
   height: 42px;
   font-size: 14px;
+}
+
+#premieredate {
+  border-top: 2px;
+  font-size: 20px;
+  margin: 22px;
+  font-family: Arvo;
+  font-weight: 700;
+}
+
+.separator-date {
+  border-bottom: solid 1px hsl(0, 66%, 78%);
 }
