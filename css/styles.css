@@ -1,24 +1,86 @@
 body {
-  background-image: linear-gradient(#FFB5E3, #FE2996);
+  background-image: var(--bg-Color-LightMode);
+}
+
+
+body.dark {
+  background-image: var(--bg-Color-DarkMode);
+}
+
+.dark .painel-header {
+  color: var(--colorTextsDarkMode);
+}
+
+.dark .texts {
+  color: var(--color-Texts-DarkMode);
+}
+
+.dark .menu-item {
+  color: var(--colorTextsDarkMode);
+}
+
+.dark .label {
+  background-color: var(--color-cool-black);
+}
+
+
+
+.painel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 105px;
+  height: 80px;
+}
+
+.name-site {
+  font-size: 30px;
+  margin: 20px;
+  text-align: left;
+}
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  height: 26px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.label {
+  background-color: var(--label-Color-LightMode);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px;
+  position: relative;
+  height: 26px;
+  width: 45px;
+  transform: scale(1.5);
+  color: var(--colorPrimary-princess-perfume);
 }
 
 .menu {
   display: flex;
-  gap: 37px;
-  margin: 25px;
-  justify-content: right;
+  gap: 45px;
   height: 23px;
 }
 
+
+
 .separator-menu {
-  border-bottom: solid 1px hsl(0, 66%, 78%);
+  border-bottom: solid 1px var(--color-mauvelous)
 }
 
 
 .menu-item {
   font-family: Rubik;
   font-size: 18px;
-  color: hsl(225, 88%, 19%);
+  color: var(--color-cool-black);
   list-style: none;
   text-decoration: none;
 }
@@ -39,14 +101,14 @@ body {
   width: 500px;
   height: 614px;
   border-radius: 30px;
-  box-shadow: 3px 12px 30px hsla(0, 0%, 0%, 0.5)
+  box-shadow: 3px 12px 30px var(--color-box-shadow)
 }
 
 
 .texts {
   margin: 15px;
   font-family: Rubik, Arvo, 'Lucida Sans';
-  color: hsl(225, 88%, 19%);
+  color: var(--color-cool-black)
 }
 
 .movie-name {
@@ -75,14 +137,14 @@ body {
 }
 
 .btn {
-  background-color: #2289b6;
+  background-color: var(--color-Primary-CyanCornflowerBlue);
   width: 180px;
   text-align: center;
   margin: 20px;
   height: 55px;
   font-size: 16px;
   border: none;
-  color: white;
+  color: var(--color-Primary-White);
   border-radius: 9px;
   cursor: pointer;
 
@@ -95,7 +157,7 @@ body {
 }
 
 .tag {
-  background-color: #6ebfe2;
+  background-color: var(--colorPrimary-RobbinEggBlue);
   border-radius: 27px;
   width: 110px;
   text-align: center;
@@ -113,5 +175,5 @@ body {
 }
 
 .separator-date {
-  border-bottom: solid 1px hsl(0, 66%, 78%);
+  border-bottom: solid 1px var(--color-mauvelous)
 }
