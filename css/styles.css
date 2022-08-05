@@ -1,14 +1,15 @@
 body {
-  background-image: var(--bg-Color-LightMode);
+  background-color: var(--bg-Color-LightMode);
 }
 
 
 body.dark {
-  background-image: var(--bg-Color-DarkMode);
+  background-color: var(--bg-Color-DarkMode);
+  color: var(--color-Primary-White);
 }
 
 .dark .painel-header {
-  color: var(--colorTextsDarkMode);
+  background-color: var(--bg-Color-DarkMode);
 }
 
 .dark .texts {
@@ -16,7 +17,7 @@ body.dark {
 }
 
 .dark .menu-item {
-  color: var(--colorTextsDarkMode);
+  color: var(--color-Primary-White);
 }
 
 .dark .label {
@@ -31,6 +32,7 @@ body.dark {
   justify-content: center;
   gap: 105px;
   height: 80px;
+  background-color: var(--color-mauvelous);
 }
 
 .name-site {
@@ -87,13 +89,13 @@ body.dark {
 
 .content-page {
   display: flex;
-  flex-direction: row-reverse;
-  height: 630px;
-  margin: 50px;
   align-items: center;
+  justify-content: center;
+  height: 760px;
+
 }
 
-.main-image {
+.container-films .main-image {
   height: 614px;
 }
 
@@ -101,22 +103,30 @@ body.dark {
   width: 500px;
   height: 614px;
   border-radius: 30px;
-  box-shadow: 3px 12px 30px var(--color-box-shadow)
+  box-shadow: 3px 12px 30px var(--color-box-shadow);
+  object-fit: cover;
 }
 
+
+.movie-infos {
+  height: 500px;
+  width: 606px;
+}
 
 .texts {
   margin: 15px;
   font-family: Rubik, Arvo, 'Lucida Sans';
-  color: var(--color-cool-black)
+  color: var(--color-cool-black);
+  text-align: left;
 }
 
 .movie-name {
   font-family: Arvo;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 26px;
+  font-weight: 600;
   line-height: 45px;
   margin: 20px;
+  text-align: left;
 }
 
 .stars {
@@ -167,13 +177,133 @@ body.dark {
 }
 
 #premieredate {
-  border-top: 2px;
-  font-size: 20px;
-  margin: 22px;
+  margin: 20px;
+  font-size: 25px;
   font-family: Arvo;
   font-weight: 700;
 }
 
 .separator-date {
-  border-bottom: solid 1px var(--color-mauvelous)
+  border-bottom: solid 1px var(--color-mauvelous);
+  margin: 10px;
+}
+
+@media(max-width: 706px) {
+
+  .content-page {
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    margin: 20px;
+  }
+
+  .main-image {
+    height: 614px;
+  }
+
+  #first-image-carousel {
+    width: 500px;
+    height: 614px;
+    border-radius: 30px;
+    box-shadow: 3px 12px 30px var(--color-box-shadow)
+  }
+
+  .painel-header {
+    display: block
+  }
+
+  .movie-infos {
+    display: flex;
+    background-color: #dfc2c2;
+    border-radius: 50px;
+  }
+
+  .name-site {
+    font-size: 34px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: right;
+
+  }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+    height: 26px;
+    width: 53px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .label {
+    background-color: var(--label-Color-LightMode);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px;
+    position: relative;
+    height: 20px;
+    width: 45px;
+    transform: scale(1.5);
+    color: var(--colorPrimary-princess-perfume);
+  }
+
+
+  .movie-name {
+    text-align: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .tags {
+    display: flex;
+    margin: 6px;
+    height: 60px;
+    justify-content: space-around;
+  }
+
+  .tag {
+    background-color: var(--colorPrimary-RobbinEggBlue);
+    border-radius: 27px;
+    width: 110px;
+    text-align: center;
+    margin: 15px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    background-color: var(--color-Primary-CyanCornflowerBlue);
+    width: 180px;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+    border: none;
+    color: var(--color-Primary-White);
+    border-radius: 13px;
+    cursor: pointer;
+  }
+
+  #btn-add-list {
+    width: 225px;
+    height: 67px;
+  }
+
+  #btn-releases {
+    display: none;
+  }
 }

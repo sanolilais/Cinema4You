@@ -1,7 +1,7 @@
 :root {
-  --bg-Color-LightMode: linear-gradient(hsl(323, 69%, 61%), hsl(329, 99%, 58%));
+  --bg-Color-LightMode: hsl(210, 33%, 98%);
   --label-Color-LightMode: hsl(284, 56%, 58%);
-  --bg-Color-DarkMode: linear-gradient(hsl(223, 54%, 58%), hsl(224, 69%, 29%));
+  --bg-Color-DarkMode: hsl(207, 46%, 20%);
   --color-Texts-DarkMode: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 7%);
   --colorPrimary-princess-perfume: hsl(329, 95%, 76%);
@@ -10,5 +10,5 @@
   --color-box-shadow: hsla(0, 0%, 0%, 0.502);
   --colorPrimary-RobbinEggBlue: hsl(198, 68%, 66%);
   --color-Primary-CyanCornflowerBlue: hsl(198, 69%, 42%);
-  --color-Primary-White: hsl(0, 0%, 100%);
+  --color-Primary-White: hsl(210, 33%, 98%);
 }
