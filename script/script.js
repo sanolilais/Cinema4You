@@ -26,31 +26,29 @@ const containerMovies = document.getElementById("containerCard")
 }
 
 async function getMovies(movies) {
-const responseMovies = ('https://omdbapi.com/?s='+{movies})
-const response = await fetch (responseMovies)
-const dataMovie = await response.json()
+  const responseMovies = (`http://omdbapi.com/?s=${movies}&apikey=f3d97dd1`)
 
-
-
-createCards(dataMovie)    
+  const response = await fetch (responseMovies).then(response => response.json().then(res => res))
+  
+  console.log(response)
+createCards(response)    
 } 
 
 function searchMovie() {
-const $searchResults = document.getElementById("searchBox").value
-const $btnsearch = document.getElementById("btnsearch")
-$btnsearch.addEventListener('click' , searchMovie)
+ 
 
 listMovies($searchResults)
 }
 
 async function listMovies(searchResults) {
-const findMovie = ('https://omdbapi.com/?s='+searchResults)
-const res = await fetch (findMovie)
-const datamovies = await res.json()
-  
-
+  const findMovie = ('https://omdbapi.com/?s='+searchResults)
+  const res = await fetch (findMovie)
+  const datamovies = await res.json()
 }
-searchMovie()
-listMovies()
-getMovies()
 
+const $searchResults = document.getElementById("searchBox").value
+const $btnsearch = document.getElementById("btnsearch")
+$btnsearch.addEventListener('click' , () => {
+  const $searchResults = document.getElementById("searchBox").value
+  getMovies($searchResults)
+})
