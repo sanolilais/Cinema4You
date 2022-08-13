@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Cine4You</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet"> 
-
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/variables.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
- 
+  <title>Cinema4You</title>
 </head>
 <body>
   <header>
     <div class="painel-header">
-      <div class="name-site">
-        <p class="title-page">Cinema 4You</p>
-      </div>
-       <div class="container">
+        <h1>Cinema 4You</h1>
+    <nav class="menu" class="texts">
+      <a href="" class="menu-item">Home</a>
+      <a href="" class="menu-item">Filmes em cartaz</a> 
+      <a href="" class="menu-item">Séries</a> 
+      <a href="" class="menu-item">Minha lista</a>
+    </nav> 
+    <form class="search-container" id="form">
+          <input type="text" placeholder="Encontre seu filme" class="searchMovie" id="searchBox">
+          <button type="button" class="btn-search" id="btnsearch">Pesquisar</button>
+    </form>
+          <div class="container-menu">
       <input type="checkbox" class="checkbox" id ="btncheck">
       <label class="label" for="checkbox">
         <i class="fa-solid fa-sun"></i>
@@ -34,60 +34,16 @@
         <div class="ball"></div>
       </label>     
     </div>
-    <nav class="menu" class="texts">
-      <a href="" class="menu-item">Home</a>
-      <a href="" class="menu-item">Filmes em cartaz</a> 
-      <a href="" class="menu-item">Séries</a> 
-      <a href="" class="menu-item">Minha lista</a>
-    </nav>
     </div>
-     <div class="separator-menu"></div>
+  </div>
+    <span class="separatormenu"></span>
   </header>
+  <div class="container-cards-grid" id="containerCard">
+   
+  </div>
+
+
   
-  <main class="content-page">
-    <div class="main-image">
-    <img src="./assets/orphan-black.jpg" id="first-image-carousel" alt=""></div>
-      <div class="movie-infos">
-        <div class="texts">
-          <div class="movie-name">
-          </div>
-          <span id="premieredate">
-          </span>
-         
-          <div class="description-movie"> Sarah Manning, uma órfã britânica com um histórico de delitos criminais, testemunha o suicídio de uma mulher e decide assumir a sua identidade, pois ela se parece exatamente como ela. Logo depois, Sarah descobre que a falecida é sua clone.</div>
-          <div class="actors"></div>
-          <div class="buttons">
-             <div class="my-list">
-            <button type="button" class="btn" id="btn-add-list" >Adicionar a  lista</button>
-          </div>
-          <div class="releases">
-            <button type="button" class="btn" id="btn-releases">Ver outros lançamentos</button>
-          </div>
-          </div>
-         
-          <div class="tags">
-              <div class="tag">
-                <p>
-                  AVENTURA
-                </p>
-              </div>
-              <div class="tag">
-                <p>
-                  COMÉDIA
-                </p>
-          </div>
-          <div class="tag">
-            <p>
-              DIVERSÃO
-            </p>
-            </div>
-        </div>
-        <div class="separator-date"></div>
-  </main>
-
-  <footer>   
-  </footer>
-  <script src="./js/script.js"></script>
 </body>
+<script src="./script/script.js"></script>
 </html>
-

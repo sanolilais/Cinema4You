@@ -1,15 +1,16 @@
 body {
-  background-color: var(--bg-Color-LightMode);
+  background-image: linear-gradient(to right, var(--bg-Color-LightMode));
+
 }
 
 
 body.dark {
-  background-color: var(--bg-Color-DarkMode);
+  background-image: linear-gradient(to right, var(--bg-Color-DarkMode));
   color: var(--color-Primary-White);
 }
 
 .dark .painel-header {
-  background-color: var(--bg-Color-DarkMode);
+  background-image: linear-gradient(to right, var(--bg-Color-DarkMode));
 }
 
 .dark .texts {
@@ -24,21 +25,22 @@ body.dark {
   background-color: var(--color-cool-black);
 }
 
+.dark #posters {
+  box-shadow: none;
+
+}
+
 
 
 .painel-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 105px;
+  justify-content: space-around;
+  gap: 40px;
   height: 80px;
-  background-color: var(--color-mauvelous);
-}
+  margin: 10px;
+  background-image: linear-gradient(to right, var(--bg-Color-LightMode));
 
-.name-site {
-  font-size: 30px;
-  margin: 20px;
-  text-align: left;
 }
 
 
@@ -73,12 +75,6 @@ body.dark {
 }
 
 
-
-.separator-menu {
-  border-bottom: solid 1px var(--color-mauvelous)
-}
-
-
 .menu-item {
   font-family: Rubik;
   font-size: 18px;
@@ -87,223 +83,55 @@ body.dark {
   text-decoration: none;
 }
 
-.content-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 760px;
 
-}
-
-.container-films .main-image {
-  height: 614px;
-}
-
-#first-image-carousel {
-  width: 500px;
-  height: 614px;
-  border-radius: 30px;
-  box-shadow: 3px 12px 30px var(--color-box-shadow);
-  object-fit: cover;
-}
-
-
-.movie-infos {
-  height: 500px;
-  width: 606px;
-}
-
-.texts {
-  margin: 15px;
-  font-family: Rubik, Arvo, 'Lucida Sans';
-  color: var(--color-cool-black);
-  text-align: left;
-}
-
-.movie-name {
-  font-family: Arvo;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 45px;
+.container-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 20px;
-  text-align: left;
+
 }
 
-.stars {
-  margin: 18px;
-  display: flex;
+#searchBox {
+  width: 250px;
+  height: 30px;
 }
 
-.description-movie {
-  font-size: 18px;
-  font-weight: 400;
-  text-align: left;
-  margin: 22px;
-  line-height: 32px;
-}
 
-.buttons {
-  display: flex;
-}
 
-.btn {
-  background-color: var(--color-Primary-CyanCornflowerBlue);
-  width: 180px;
-  text-align: center;
+.card {
+  width: 300px;
   margin: 20px;
-  height: 55px;
-  font-size: 16px;
-  border: none;
-  color: var(--color-Primary-White);
-  border-radius: 9px;
-  cursor: pointer;
-
-}
-
-.tags {
   display: flex;
-  margin: 8px;
-  height: 70px;
+  flex-direction: column;
 }
 
-.tag {
-  background-color: var(--colorPrimary-RobbinEggBlue);
-  border-radius: 27px;
-  width: 110px;
-  text-align: center;
-  margin: 15px;
-  height: 42px;
-  font-size: 14px;
+#posters {
+  width: 280px;
+  height: 425px;
+  border-radius: 15px;
+  box-shadow: 6px 5px 15px;
+}
+
+#moviename {
+  font-size: 22px;
 }
 
 #premieredate {
-  margin: 20px;
-  font-size: 25px;
-  font-family: Arvo;
-  font-weight: 700;
+  font-size: 20px;
 }
 
-.separator-date {
-  border-bottom: solid 1px var(--color-mauvelous);
+.info-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
 }
 
-@media(max-width: 706px) {
 
-  .content-page {
-    display: flex;
-    flex-direction: column;
-    height: 1200px;
-    margin: 20px;
-  }
-
-  .main-image {
-    height: 614px;
-  }
-
-  #first-image-carousel {
-    width: 500px;
-    height: 614px;
-    border-radius: 30px;
-    box-shadow: 3px 12px 30px var(--color-box-shadow)
-  }
-
-  .painel-header {
-    display: block
-  }
-
-  .movie-infos {
-    display: flex;
-    background-color: #dfc2c2;
-    border-radius: 50px;
-  }
-
-  .name-site {
-    font-size: 34px;
-    margin: 20px;
-    text-align: center;
-  }
-
-  .container {
-    display: flex;
-    justify-content: right;
-
-  }
-
-  .checkbox {
-    opacity: 0;
-    position: absolute;
-    height: 26px;
-    width: 53px;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .label {
-    background-color: var(--label-Color-LightMode);
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 6px;
-    position: relative;
-    height: 20px;
-    width: 45px;
-    transform: scale(1.5);
-    color: var(--colorPrimary-princess-perfume);
-  }
-
-
-  .movie-name {
-    text-align: center;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .tags {
-    display: flex;
-    margin: 6px;
-    height: 60px;
-    justify-content: space-around;
-  }
-
-  .tag {
-    background-color: var(--colorPrimary-RobbinEggBlue);
-    border-radius: 27px;
-    width: 110px;
-    text-align: center;
-    margin: 15px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn {
-    background-color: var(--color-Primary-CyanCornflowerBlue);
-    width: 180px;
-    text-align: center;
-    margin: 20px;
-    font-size: 18px;
-    border: none;
-    color: var(--color-Primary-White);
-    border-radius: 13px;
-    cursor: pointer;
-  }
-
-  #btn-add-list {
-    width: 225px;
-    height: 67px;
-  }
-
-  #btn-releases {
-    display: none;
-  }
+.description-movie {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  margin: 12px;
+  line-height: 24px;
 }
