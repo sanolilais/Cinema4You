@@ -1,12 +1,7 @@
 :root {
-  --bg-Color-LightMode: hsl(310, 44%, 85%), hsl(261, 64%, 73%);
-  --label-Color-LightMode: hsl(284, 56%, 58%);
-  --bg-Color-DarkMode: hsl(250, 33%, 56%), hsl(229, 64%, 31%);
-  --color-Texts-DarkMode: hsl(0, 0%, 100%);
-  --color-black: hsl(0, 0%, 7%);
-  --colorPrimary-princess-perfume: hsl(329, 95%, 76%);
-  --color-mauvelous: hsl(0, 66%, 78%);
-  --color-cool-black: hsl(225, 88%, 19%);
+  --color-primary-body: #1E1D24;
+  --color-primary-texts: #E4E6E7;
+  --color-cards: hsl(0, 29%, 16%);
   --color-box-shadow: hsla(0, 0%, 0%, 0.502);
   --colorPrimary-RobbinEggBlue: hsl(198, 68%, 66%);
   --color-Primary-CyanCornflowerBlue: hsl(198, 69%, 42%);

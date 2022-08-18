@@ -1,36 +1,7 @@
 body {
-  background-image: linear-gradient(to right, var(--bg-Color-LightMode));
-
+  background-color: var(--color-primary-body);
+  color: var(--color-primary-text-header);
 }
-
-
-body.dark {
-  background-image: linear-gradient(to right, var(--bg-Color-DarkMode));
-  color: var(--color-Primary-White);
-}
-
-.dark .painel-header {
-  background-image: linear-gradient(to right, var(--bg-Color-DarkMode));
-}
-
-.dark .texts {
-  color: var(--color-Texts-DarkMode);
-}
-
-.dark .menu-item {
-  color: var(--color-Primary-White);
-}
-
-.dark .label {
-  background-color: var(--color-cool-black);
-}
-
-.dark #posters {
-  box-shadow: none;
-
-}
-
-
 
 .painel-header {
   display: flex;
@@ -39,85 +10,63 @@ body.dark {
   gap: 40px;
   height: 80px;
   margin: 10px;
-  background-image: linear-gradient(to right, var(--bg-Color-LightMode));
+  color: var(--color-primary-texts);
 
-}
-
-
-.checkbox {
-  opacity: 0;
-  position: absolute;
-  height: 26px;
-  width: 50px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.label {
-  background-color: var(--label-Color-LightMode);
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 6px;
-  position: relative;
-  height: 26px;
-  width: 45px;
-  transform: scale(1.5);
-  color: var(--colorPrimary-princess-perfume);
 }
 
 .menu {
   display: flex;
-  gap: 45px;
-  height: 23px;
+  gap: 20px;
+  height: 22px;
 }
-
 
 .menu-item {
   font-family: Rubik;
   font-size: 18px;
-  color: var(--color-cool-black);
   list-style: none;
   text-decoration: none;
+  color: var(--color-primary-texts);
 }
 
-
-.container-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 20px;
-
+.search-container {
+  display: flex;
 }
 
 #searchBox {
-  width: 250px;
+  width: 200px;
   height: 30px;
 }
 
-
+.container-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px;
+}
 
 .card {
-  width: 300px;
-  margin: 20px;
+  width: 170px;
+  height: 400px;
+  margin: 8px;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+  color: var(--color-primary-texts);
+  background-color: var(--color-cards);
 }
 
 #posters {
-  width: 280px;
-  height: 425px;
-  border-radius: 15px;
-  box-shadow: 6px 5px 15px;
+  object-fit: fill;
+  width: 170px;
+  height: 260px;
 }
 
 #moviename {
-  font-size: 22px;
+  font-size: 18px;
+  text-align: center;
 }
 
 #premieredate {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .info-movie {
@@ -127,11 +76,9 @@ body.dark {
   margin: 10px;
 }
 
-
-.description-movie {
-  font-size: 17px;
-  font-weight: 400;
-  text-align: center;
-  margin: 12px;
-  line-height: 24px;
+.btn-showmore {
+  background-color: var(--color-Primary-White);
+  border-radius: 5px;
+  width: 90px;
+  height: 25px;
 }
