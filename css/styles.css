@@ -1,84 +1,161 @@
 body {
   background-color: var(--color-primary-body);
-  color: var(--color-primary-text-header);
+  color: var(--color-primary-texts);
+  font-family: Hanuman;
 }
 
 .painel-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  gap: 40px;
-  height: 80px;
-  margin: 10px;
+  height: 95px;
   color: var(--color-primary-texts);
-
+  position: relative;
+  top: 150px;
 }
 
-.menu {
-  display: flex;
-  gap: 20px;
-  height: 22px;
-}
-
-.menu-item {
-  font-family: Rubik;
-  font-size: 18px;
-  list-style: none;
-  text-decoration: none;
-  color: var(--color-primary-texts);
-}
 
 .search-container {
   display: flex;
+  justify-content: center;
+  position: relative;
+  top: 8px;
+  height: 38px;
 }
 
 #searchBox {
-  width: 200px;
-  height: 30px;
+  width: 202px;
+  height: 32px;
 }
 
 .container-cards-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 30px 50px;
 }
 
 .card {
-  width: 170px;
-  height: 400px;
+  position: relative;
+  width: 154px;
+  height: 380px;
   margin: 8px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   color: var(--color-primary-texts);
-  background-color: var(--color-cards);
+}
+
+.card :hover {
+  transform: scale(1.06);
 }
 
 #posters {
   object-fit: fill;
-  width: 170px;
-  height: 260px;
-}
-
-#moviename {
-  font-size: 18px;
-  text-align: center;
-}
-
-#premieredate {
-  font-size: 16px;
+  width: 154px;
+  height: 234px;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.7);
 }
 
 .info-movie {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 10px;
+  padding-top: 10px;
+  padding-left: 2px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.btn-showmore {
-  background-color: var(--color-Primary-White);
-  border-radius: 5px;
+.info-movie:hover {
+  transform: scale(1.06);
+}
+
+
+.movie-section {
+  font-family: Hanuman;
+  font-weight: 700;
+  margin-top: 40px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .3;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movie-infos {
+  width: 40%;
+  color: var(--color-primary-texts);
+}
+
+.movie-genre {
+  display: inline-flex;
   width: 90px;
-  height: 25px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-robbin-blue);
+  padding: 5px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.movie-genre:not(:last-child) {
+  margin-right: 10px;
+}
+
+.movie-title {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.movie-actors {
+  width: 75%;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.movie-details {
+  display: flex;
+  align-items: center;
+  max-width: 75%;
+  align-items: center;
+}
+
+.movie-detail {
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  max-width: 150px;
+}
+
+.movie-detail:not(last-child) {
+  margin-right: 10px;
+}
+
+.separator {
+  display: inline-block;
+  background-color: var(--color-primary-texts);
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.movie-plot {
+  width: 75%;
+  line-height: 30px;
+  opacity: .7;
 }

@@ -1,9 +1,9 @@
 :root {
-  --color-primary-body: #1E1D24;
+  --color-primary-body: #38496e;
   --color-primary-texts: #E4E6E7;
   --color-cards: hsl(0, 29%, 16%);
   --color-box-shadow: hsla(0, 0%, 0%, 0.502);
-  --colorPrimary-RobbinEggBlue: hsl(198, 68%, 66%);
+  --color-robbin-blue: hsl(198, 68%, 66%);
   --color-Primary-CyanCornflowerBlue: hsl(198, 69%, 42%);
   --color-Primary-White: hsl(210, 33%, 98%);
 }

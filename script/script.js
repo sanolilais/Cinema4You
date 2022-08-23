@@ -1,37 +1,109 @@
+
+
 function createCards (data) {
- const containerMovies = document.getElementById("containerCard")
- containerMovies.innerHTML = ''
+  const $containerMovies = document.getElementById("containerCard")
+  $containerMovies.innerHTML = ''
+   const $painelHeader = document.getElementById("painelHeader")
+  $painelHeader.style.top = '-15px'
+  $painelHeader.style.right = '20px'
+  $painelHeader.style.flexDirection = 'row' 
+  $painelHeader.style.justifyContent = 'space-around'
+  
+  const $movieSection = document.getElementById("movieSection")
+  $movieSection.innerHTML = ''
   data.Search.forEach(movie => {
-   containerMovies.insertAdjacentHTML('beforeend', 
-`
-  <div class="card">
-    <img src=${movie.Poster} id="posters" alt="">
-    <div class="info-movie texts-about-movie">
-    <div class="movie-name" id="moviename">
-     ${movie.Title}
+    $containerMovies.insertAdjacentHTML ('beforeend' , 
+    
+    `
+      <div class="card">
+        <img src=${movie.Poster} id="posters" alt="Imagem de divulgacão do filme ${movie.Title}">
+      <div class="info-movie description-movie">
+        <div class="movie-title id="movie-title">
+        ${movie.Title}
+        </div>
+        <span id="premiereDate">
+          ${movie.Year}
+        </span>
+        <a href="/?${movie.imdbID}">
+        Ler mais</a>
+      </div>
     </div>
-    <span id="premieredate">
-     ${movie.Year}
-    </span>
-    <button type="button" class="btn-showmore" id="btnshowMore">Ver Mais</button>
-    </div>      
+  `)
+    })
+  }
+
+function createMovieSection(movie) {
+  const $movieSection = document.getElementById("movieSection")
+  let movieGenresContent = ''
+  const $painelHeader = document.getElementById("painelHeader")
+  $painelHeader.style.top = '-15px'
+  $painelHeader.style.right = '20px'
+  $painelHeader.style.flexDirection = 'row' 
+  $painelHeader.style.justifyContent = 'space-around'
+  movie.Genre.split(' , ').forEach(genre => {
+    movieGenresContent += `<span class="movie-genre">${genre}</span>`
+  })
+  $movieSection.innerHTML = `
+    <div class="movie-infos">
+      <div class="movie-genres">
+        ${movieGenresContent}
     </div>
-` )
- }); 
+    <h1 class="movie-title">${movie.Title}</h1>
+    <h4 class="movie-actors">
+      ${movie.Actors}
+    </h4>
+    <div class="movie-details">
+      <span class="movie-detail movie-runtime">
+        ${movie.Runtime}
+      </span>
+      <span class="separator"></span>
+      <span class="movie-detail release">
+        ${movie.Year}
+      </span>
+      <span class="separator"></span>
+      <span class="movie-detail movie-lang">
+        ${movie.Language.replaceAll(',' , '')}
+      </span>
+    </div>
+    <p class="movie-plot">
+      ${movie.Plot}
+    </p>
+  </div>
+  `
+
+  const $bgContainer = document.createElement('div')
+  $bgContainer.id = 'bgContainer'
+  $bgContainer.classList.add('bg-container')
+  $bgContainer.style.backgroundImage = `url(${movie.Poster})`
+  $movieSection.appendChild($bgContainer)
+
 }
+
+
+
 async function getMovies(movies) {
  const responseMovies = (`http://omdbapi.com/?s=${movies}&apikey=f3d97dd1`)
  const response = await fetch (responseMovies).then(response => response.json()
   .then(res => res))
    createCards(response)  
 } 
-async function listMovies(searchResults) { 
- const findMovie = ('https://omdbapi.com/?s='+searchResults)
- const res = await fetch (findMovie)
- const datamovies = await res.json()
-} 
+
 const $btnsearch = document.getElementById("btnsearch")
  $btnsearch.addEventListener('click' , () => { 
  const $searchResults = document.getElementById("searchBox").value  
  getMovies($searchResults)
 })
+
+if (window.location.search) {
+  const $containerMovies = document.getElementById("containerCard")
+  $containerMovies.innerHTML = ''
+  const movieId = window.location.search.replace('?' , '') 
+
+  const responseMovies = (`http://omdbapi.com/?i=${movieId}&apikey=f3d97dd1`)
+  let movie = []
+  fetch (responseMovies).then(response => 
+    response.json().then(res => {
+      movie = res
+      createMovieSection(movie)
+    }))
+}

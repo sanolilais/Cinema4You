@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/variables.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -14,21 +17,17 @@
 </head>
 <body>
  <header>
-  <div class="painel-header">
+  <div class="painel-header" id="painelHeader">
    <h1>Cinema 4You</h1>
-    <nav class="menu" class="texts">
-     <a href="" class="menu-item">Home</a>
-     <a href="" class="menu-item">Filmes em cartaz</a> 
-     <a href="" class="menu-item">Séries</a> 
-     <a href="" class="menu-item">Minha lista</a>
-    </nav> 
-    <form class="search-container" id="form">
-     <input type="text" placeholder="Encontre seu filme" class="searchMovie" id="searchBox">
-      <button type="button" class="btn-search" id="btnsearch">Pesquisar</button>
-    </form>
- </div>
+<form class="search-container" id="formSearch">
+  <input type="text" placeholder="Encontre seu filme" class="searchMovie" id="searchBox">
+   <button type="button" class="btn-search" id="btnsearch">Pesquisar</button>
+ </form>
  </header>
+ 
+ </div>
 <div class="container-cards-grid" id="containerCard"></div> 
+<section class="movie-section" id="movieSection"></section>
 </body>
 <script src="./script/script.js"></script>
 </html>
