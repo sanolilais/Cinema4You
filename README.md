@@ -12,7 +12,7 @@ link que redireciona o usuário para uma nova página, onde são exibidos detalh
 - [x] JAVASCRIPT
 
 --- 
-**Cine4You faz requisicão *Fetch* para a popular API [OMDb API](https://omdbapi.com/?), essa API retorna informações do conteúdo de acordo com o parâmetro
+**Cine4You faz requisicões *Fetch* para a popular API [OMDb API](https://omdbapi.com/?), essa API retorna informações do conteúdo de acordo com o parâmetro
 passado na URL.**
 
 --- 
