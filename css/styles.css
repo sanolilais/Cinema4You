@@ -37,6 +37,10 @@ body {
   color: var(--color-painel-text);
 }
 
+.painel-header-style .info {
+  display: none; 
+}
+
 .painel-header a {
   text-decoration: none;
   color: var(--color-painel-text);
