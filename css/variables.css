@@ -1,9 +1,12 @@
 :root {
-  --color-primary-body: #38496e;
-  --color-primary-texts: #E4E6E7;
-  --color-cards: hsl(0, 29%, 16%);
+  --color-primary-body: hsl(249, 11%, 13%);
+  --color-primary-texts: hsl(200, 6%, 90%);
+  --color-primary-dark: hsl(0, 0%, 21%);
   --color-box-shadow: hsla(0, 0%, 0%, 0.502);
   --color-robbin-blue: hsl(198, 68%, 66%);
-  --color-Primary-CyanCornflowerBlue: hsl(198, 69%, 42%);
-  --color-Primary-White: hsl(210, 33%, 98%);
+  --color-flower-blue: hsl(198, 69%, 42%);
+  --color-primary-white: hsl(210, 33%, 98%);
+  --color-icon-search: hsl(14, 100%, 57%);
+  --color-painel-text: hsl(0, 86%, 73%);
+  --color-box-shadow: hsla(0, 0%, 0%, 0.65);
 }

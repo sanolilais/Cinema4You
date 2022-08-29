@@ -3,14 +3,13 @@
 function createCards (data) {
   const $containerMovies = document.getElementById("containerCard")
   $containerMovies.innerHTML = ''
-   const $painelHeader = document.getElementById("painelHeader")
-  $painelHeader.style.top = '-15px'
-  $painelHeader.style.right = '20px'
-  $painelHeader.style.flexDirection = 'row' 
-  $painelHeader.style.justifyContent = 'space-around'
-  
   const $movieSection = document.getElementById("movieSection")
   $movieSection.innerHTML = ''
+  const $headerStyle = document.getElementById("painelHeader")
+  const $imageBghome = document.getElementById("bgHome")
+  $headerStyle.classList.remove('painel-header')
+  $headerStyle.classList.add('painel-header-style')
+  $imageBghome.style.display = 'none'
   data.Search.forEach(movie => {
     $containerMovies.insertAdjacentHTML ('beforeend' , 
     
@@ -20,7 +19,7 @@ function createCards (data) {
       <div class="info-movie description-movie">
         <div class="movie-title id="movie-title">
         ${movie.Title}
-        </div>
+      </div>
         <span id="premiereDate">
           ${movie.Year}
         </span>
@@ -35,11 +34,11 @@ function createCards (data) {
 function createMovieSection(movie) {
   const $movieSection = document.getElementById("movieSection")
   let movieGenresContent = ''
-  const $painelHeader = document.getElementById("painelHeader")
-  $painelHeader.style.top = '-15px'
-  $painelHeader.style.right = '20px'
-  $painelHeader.style.flexDirection = 'row' 
-  $painelHeader.style.justifyContent = 'space-around'
+  const $imageBghome = document.getElementById("bgHome")
+  const $headerStyle = document.getElementById("painelHeader")
+  $headerStyle.classList.remove('painel-header')
+  $headerStyle.classList.add('painel-header-style')
+  $imageBghome.style.display = 'none'
   movie.Genre.split(' , ').forEach(genre => {
     movieGenresContent += `<span class="movie-genre">${genre}</span>`
   })
@@ -82,7 +81,7 @@ function createMovieSection(movie) {
 
 
 async function getMovies(movies) {
- const responseMovies = (`http://omdbapi.com/?s=${movies}&apikey=f3d97dd1`)
+ const responseMovies = (`https://omdbapi.com/?s=${movies}&apikey=f3d97dd1`)
  const response = await fetch (responseMovies).then(response => response.json()
   .then(res => res))
    createCards(response)  
@@ -99,7 +98,7 @@ if (window.location.search) {
   $containerMovies.innerHTML = ''
   const movieId = window.location.search.replace('?' , '') 
 
-  const responseMovies = (`http://omdbapi.com/?i=${movieId}&apikey=f3d97dd1`)
+  const responseMovies = (`https://omdbapi.com/?i=${movieId}&apikey=f3d97dd1`)
   let movie = []
   fetch (responseMovies).then(response => 
     response.json().then(res => {
