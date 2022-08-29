@@ -19,6 +19,7 @@ body {
   position: absolute;
   top: 300px;
   margin-left: 180px;
+  margin-bottom: 25px;
 }
 
 .painel-header-style {
@@ -67,11 +68,11 @@ body {
   border-radius: 50px;
   color: var(--color-icon-search);
   transition: 0.4s ease;
+  cursor: pointer;
 }
 
 .search-container:hover {
-  width: 250px;
-  margin: 0px 15px;
+  transform: scale(1.1);
 }
 
 .container-cards-grid {

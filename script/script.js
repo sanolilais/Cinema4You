@@ -1,5 +1,3 @@
-
-
 function createCards (data) {
   const $containerMovies = document.getElementById("containerCard")
   $containerMovies.innerHTML = ''
@@ -39,14 +37,14 @@ function createMovieSection(movie) {
   $headerStyle.classList.remove('painel-header')
   $headerStyle.classList.add('painel-header-style')
   $imageBghome.style.display = 'none'
-  movie.Genre.split(' , ').forEach(genre => {
+  movie.Genre.split(', ').forEach(genre => {
     movieGenresContent += `<span class="movie-genre">${genre}</span>`
   })
   $movieSection.innerHTML = `
     <div class="movie-infos">
       <div class="movie-genres">
         ${movieGenresContent}
-    </div>
+      </div>
     <h1 class="movie-title">${movie.Title}</h1>
     <h4 class="movie-actors">
       ${movie.Actors}
@@ -78,8 +76,6 @@ function createMovieSection(movie) {
 
 }
 
-
-
 async function getMovies(movies) {
  const responseMovies = (`https://omdbapi.com/?s=${movies}&apikey=f3d97dd1`)
  const response = await fetch (responseMovies).then(response => response.json()
@@ -91,6 +87,15 @@ const $btnsearch = document.getElementById("btnsearch")
  $btnsearch.addEventListener('click' , () => { 
  const $searchResults = document.getElementById("searchBox").value  
  getMovies($searchResults)
+})
+
+const $searchInput = document.getElementById('searchBox')
+$searchInput.addEventListener('keypress', (event) => {
+  if(event.key === 'Enter') {
+    event.preventDefault()
+    const searchParam = $searchInput.value
+    getMovies(searchParam)
+  }
 })
 
 if (window.location.search) {
