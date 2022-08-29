@@ -2,7 +2,6 @@
 ### Site desenvolvido para busca de filmes e séries 
 ---
 
-Descrição
  **Essa aplicação foi desenvolvida para fazer busca de filmes, programas de tv e séries. Você pode buscar pelo conteúdo desejado na barra de pesquisa
 e os resultados serão exibidos em cards, a partir da palavra buscada. Cada card exibe o nome do conteúdo pesquisado, a data de lançamento e data final (quando se tratar de uma série), e um
 link que redireciona o usuário para uma nova página, onde são exibidos detalhes adicionais do conteúdo, como o gênero(s), cast, tempo de duração, idioma e a sinopse.**
